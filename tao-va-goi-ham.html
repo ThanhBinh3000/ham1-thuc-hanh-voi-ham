@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo và gọi hàm</title>
+</head>
+<body>
+<script>
+    function processConfirm(answer) {
+        let result ="";
+        if (answer){
+            result= "thông minh. chúng ta sẽ chơi một ván cờ";
+        }else {
+            result= "có lẽ sau đó"
+        }
+        return result;
+    }
+    let confirmAnswer = confirm ("chúng ta sẽ chơi một trò chơi?");//Hàm confirm() cũng sẽ xuất hiện một thông báo popup nhưng nó có thêm hai sự lựa chọn là Yes và No, nếu người dùng chọn Yes thì nó trả về TRUE và ngược lại nếu chọn NO thì nó sẽ trả về FALSE. Nó cũng có một tham số truyền vào và tham số này chính là nội dung thông báo.
+    let theAnswwer = processConfirm(confirmAnswer);
+    alert(theAnswwer);
+</script>
+</body>
+</html>

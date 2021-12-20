@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thực hành chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Fahrenheit</label>
+<!--        Thẻ label dùng để định nghĩa nhãn cho các thẻ input trong HTML. Tác dụng của label là làm cho thao tác nhập liệu trở nên dễ dàng hơn.-->
+        <input type="text"id="inputFahrenheit" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+<!--        Tác dụng của placeholder là cung cấp thêm thông tin cho người dùng, giúp họ biết cần nhập dữ liệu gì hoặc bất cứ thông báo nào mà bạn muốn.-->
+<!--        Thuộc tính oninput được kích hoạt khi người dùng nhập hoặc thay đổi thông tin trong thẻ.-->
+<!--        Thuộc tính onchange được kích hoạt ngay khi giá trị của thẻ thay đổi-->
+    </p>
+    <p>Celsius: <span id="outputCelsius"></span></p>
+<!--    Tag <span> được sử dụng để nhóm các inline trong văn bản HTML.-->
+<!--    Ta có thể dùng span kèm với css để định dạng một phần nội dung trong văn bản HTML-->
+</form>
+<script>
+     function temperatureConverter(valNum) {
+         valNum= parseFloat(valNum);//Phương thức parseFloat() sẽ phân tích một chuỗi được cung cấp và trả về một giá trị số.
+         document.getElementById('outputCelsius').innerHTML= (valNum-32) /1
+     }
+</script>
+</body>
+</html>

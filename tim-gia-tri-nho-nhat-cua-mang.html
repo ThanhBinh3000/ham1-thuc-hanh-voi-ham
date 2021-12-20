@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+<body>
+<script>
+    // đối với mảng arr1=[5, 3, 5, 7, 9]
+     function tatol(arr1) {
+          let min =arr1 [0];
+          for (i=0;i<arr1.length;i++){
+              if (arr1[i]<min){
+                  min=arr1[i]
+              }
+          }
+          return min
+      }
+      let arr1 = [5, 3, 5, 7, 9];
+      let min = tatol(arr1);
+      alert(min);
+</script>
+<script>
+    // đối với mảng rồng arr2[]
+    function minArray(arr2) {
+        if(arr2.length === 0)
+            return -1;
+        let min = arr2[0];
+
+        for(let i = 1; i < arr2.length; i++){
+            if(arr2[i] < min){
+                min = arr2[i];
+            }
+        }
+        return min;
+    }
+    let arr2 = [];
+    let min = minArray(arr2);
+    alert(min);
+    //Vậy khi hàm trả về giá trị -1 ta hiểu rằng mảng này đang rỗng.
+    //Tuy nhiên có trường hợp xảy ra là nếu trong mảng có phần tử -1 là phần tử nhỏ nhất thì
+    //Cần xây dựng lại hàm trên
+    //Không phải trả về giá trị min trong mảng, mà trả về vị trí của phần tử trong mảng
+    //Do đó, nếu hàm trả về -1 tức là mảng rỗng.
+
+</script>
+</body>
+</html>
